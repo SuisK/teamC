@@ -1,0 +1,11 @@
+#timer h1 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 380px;
+}
+#button {
+    text-align: center;
+    width: 100%;
+    font-size: 100px;
+    margin-top: -50%;
+}
