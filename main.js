@@ -42,6 +42,18 @@ start.addEventListener("click",function(){
     countUp();
 });
 
+stop.addEventListener('click',function(){
+
+    //タイマーを止めるにはclearTimeoutを使う必要があり、そのためにはclearTimeoutの引数に渡すためのタイマーのidが必要
+   clearTimeout(timerId);
+
+
+    //タイマーに表示される時間elapsedTimeが現在時刻かたスタートボタンを押した時刻を引いたものなので、
+    //タイマーを再開させたら0になってしまう。elapsedTime = Date.now - startTime
+    //それを回避するためには過去のスタート時間からストップ時間までの経過時間を足してあげなければならない。elapsedTime = Date.now - startTime + timeToadd (timeToadd = ストップを押した時刻(Date.now)から直近のスタート時刻(startTime)を引く)
+   timeToadd += Date.now() - startTime;
+});
+
 
 
 
