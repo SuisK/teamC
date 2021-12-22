@@ -6,15 +6,15 @@ let start = document.getElementById("button")
 
 let startTime;
 
-let elapsedTime = 0;//経過時間をいれる
+let elapsedTime = 0; //経過時間をいれる
 
 let timerId;　
 
-let timeToadd = 0;//ストップから再開の時、値保持
+let timeToadd = 0; //ストップから再開の時、値保持
 
 
-function updateTimeText(){
-     //分のカウント
+function updateTimeText() {
+    //分のカウント
     let m = Math.floor(elapsedTime / 60000);
 
     //秒のカウント
@@ -32,52 +32,41 @@ function updateTimeText(){
     console.log(m + ':' + s + ':' + ms)
 }
 
-function countUp(){
-    timerId = setTimeout(function(){
+function countUp() {
+    timerId = setTimeout(function() {
         elapsedTime = Date.now() - startTime + timeToadd;
         updateTimeText()
         countUp();
-    },10);
+    }, 10);
 }
 
 
-start.addEventListener("click",function(){
-    startTime = Date.now();    //時間データをいれる
+start.addEventListener("click", function() {
+    startTime = Date.now(); //時間データをいれる
     countUp();
 });
 
 var button2 = document.getElementById('button2');
-button2.addEventListener('click',function(){
+button2.addEventListener('click', function() {
 
     //タイマーを止めるにはclearTimeoutを使う必要があり、そのためにはclearTimeoutの引数に渡すためのタイマーのidが必要
-   clearTimeout(timerId);
+    clearTimeout(timerId);
 
 
-    
-   timeToadd += Date.now() - startTime;
+
+    timeToadd += Date.now() - startTime;
 });
 
 let button3 = document.getElementById("button3");
-button3.addEventListener('click',function(){
+button3.addEventListener('click', function() {
 
-        //経過時刻を更新するための変数elapsedTimeを0にしてあげつつ、updateTimetTextで0になったタイムを表示。
-        elapsedTime = 0;
+    //経過時刻を更新するための変数elapsedTimeを0にしてあげつつ、updateTimetTextで0になったタイムを表示。
+    elapsedTime = 0;
 
-        //リセット時に0に初期化したいのでリセットを押した際に0を代入してあげる
-        timeToadd = 0;
+    //リセット時に0に初期化したいのでリセットを押した際に0を代入してあげる
+    timeToadd = 0;
 
-        //updateTimetTextで0になったタイムを表示
-        updateTimetText();
+    //updateTimetTextで0になったタイムを表示
+    updateTimeText();
 
-    });
-
-
-
-
-
-
-
-
-
-
-
+});
