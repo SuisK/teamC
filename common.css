@@ -14,29 +14,31 @@ header h1 {
     margin-left: 5%;
 }
 
-#timer{
+#timer {
     text-align: center;
     margin-top: 0;
     font-size: 380px;
 }
 
-
-/*
 #button {
-    visibility: hidden;
-    margin-top: -6%;
+    position: absolute;
     font-size: 100px;
-    width: 100%;
+    width: 99.5%;
+    margin-top: 5%;
 }
 
 #button2 {
     visibility: hidden;
     position: absolute;
-    width: 99.15%;
+    width: 99.5%;
     font-size: 100px;
-    margin-top: -4.8%;
+    margin-top: 5%;
 }
 
 #button3 {
     visibility: hidden;
-}*/
+    position: absolute;
+    width: 99.5%;
+    font-size: 100px;
+    margin-top: 5%;
+}
