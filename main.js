@@ -1,14 +1,12 @@
 let timer = document.getElementById("timer");
 
-//let h1 = getElementsByTagName("h1");
-
 let start = document.getElementById("button")
 
 let startTime;
 
 let elapsedTime = 0;//経過時間をいれる
 
-let timerId;　
+let timerId;
 
 let timeToadd = 0;//ストップから再開の時、値保持
 
@@ -46,7 +44,7 @@ start.addEventListener("click",function(){
     countUp();
 });
 
-var button2 = document.getElementById('button2');
+let button2 = document.getElementById('button2');
 button2.addEventListener('click',function(){
 
     //タイマーを止めるにはclearTimeoutを使う必要があり、そのためにはclearTimeoutの引数に渡すためのタイマーのidが必要
