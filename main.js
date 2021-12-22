@@ -37,7 +37,8 @@ function countUp(){
 
 
 start.addEventListener("click",function(){
-    startTime = Date.now();    //データをいれる
+    startTime = Date.now();    //時間データをいれる
+    console.log("hello world");
     countUp();
 });
 
