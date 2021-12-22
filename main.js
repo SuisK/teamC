@@ -1,3 +1,5 @@
+let timer = document.getElementById("timer");
+
 let start = document.getElementById("button")
 
 let startTime;
@@ -23,12 +25,13 @@ function updateTimeText(){
     s = ('0' + s).slice(-2);
     ms = ('0' + ms).slice(-2);
 
-    timerId.textCountent = m + ':' + s + ':' + ms;
+    timer.textContent = m + ':' + s + ':' + ms;
+
+    console.log(m + ':' + s + ':' + ms)
 }
 
 function countUp(){
     timerId = setTimeout(function(){
-
         elapsedTime = Date.now() - startTime + timeToadd;
         updateTimeText()
         countUp();
@@ -38,19 +41,17 @@ function countUp(){
 
 start.addEventListener("click",function(){
     startTime = Date.now();    //時間データをいれる
-    console.log("hello world");
     countUp();
 });
 
-stop.addEventListener('click',function(){
+var button2 = document.getElementById('button2');
+button2.addEventListener('click',function(){
 
     //タイマーを止めるにはclearTimeoutを使う必要があり、そのためにはclearTimeoutの引数に渡すためのタイマーのidが必要
    clearTimeout(timerId);
 
 
-    //タイマーに表示される時間elapsedTimeが現在時刻かたスタートボタンを押した時刻を引いたものなので、
-    //タイマーを再開させたら0になってしまう。elapsedTime = Date.now - startTime
-    //それを回避するためには過去のスタート時間からストップ時間までの経過時間を足してあげなければならない。elapsedTime = Date.now - startTime + timeToadd (timeToadd = ストップを押した時刻(Date.now)から直近のスタート時刻(startTime)を引く)
+    
    timeToadd += Date.now() - startTime;
 });
 
@@ -64,4 +65,3 @@ stop.addEventListener('click',function(){
 
 
 
-//let timer = document.getElementById("timer");
