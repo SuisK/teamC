@@ -20,7 +20,10 @@ header h1 {
     font-size: 380px;
 }
 
+
+/*
 #button {
+    visibility: hidden;
     margin-top: -6%;
     font-size: 100px;
     width: 100%;
@@ -33,3 +36,7 @@ header h1 {
     font-size: 100px;
     margin-top: -4.8%;
 }
+
+#button3 {
+    visibility: hidden;
+}*/
