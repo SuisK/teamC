@@ -1,5 +1,7 @@
 let timer = document.getElementById("timer");
 
+//let h1 = getElementsByTagName("h1");
+
 let start = document.getElementById("button")
 
 let startTime;
@@ -54,6 +56,20 @@ button2.addEventListener('click',function(){
     
    timeToadd += Date.now() - startTime;
 });
+
+let button3 = document.getElementById("button3");
+button3.addEventListener('click',function(){
+
+        //経過時刻を更新するための変数elapsedTimeを0にしてあげつつ、updateTimetTextで0になったタイムを表示。
+        elapsedTime = 0;
+
+        //リセット時に0に初期化したいのでリセットを押した際に0を代入してあげる
+        timeToadd = 0;
+
+        //updateTimetTextで0になったタイムを表示
+        updateTimetText();
+
+    });
 
 
 
