@@ -40,14 +40,49 @@ function countUp() {
 }
 
 
-start.addEventListener("click", function() {
+let button = document.getElementById("start");
+button.addEventListener("click", function() {
     startTime = Date.now(); //時間データをいれる
     countUp();
 });
 
-var button2 = document.getElementById('stop');
+
+//let h1 = getElementsByTagName("h1");
+
+
+
+let button2 = document.getElementById('stop');
 button2.addEventListener('click', function() {
  
 
     //タイマーを止めるにはclearTimeoutを使う必要があり、そのためにはclearTimeoutの引数に渡すためのタイマーのidが必要
+    clearTimeout(timerId);
+
+    
+    timeToadd += Date.now() - startTime;
+ });
+ 
+ let button3 = document.getElementById("reset");
+button3.addEventListener('click',function(){
+
+        //経過時刻を更新するための変数elapsedTimeを0にしてあげつつ、updateTimetTextで0になったタイムを表示。
+        elapsedTime = 0;
+
+        //リセット時に0に初期化したいのでリセットを押した際に0を代入してあげる
+        timeToadd = 0;
+
+        //updateTimetTextで0になったタイムを表示
+        updateTimeText();
+});
+
+button.addEventListener("click", function() {
+    //スタートボタンを押したとき、ストップボタンを表示し、スタートボタンを隠す
+    button2.style.visibility = 'visible';
+    button.style.visibility = 'hidden';
+});
+
+button2.addEventListener("click", function() {
+    //ストップボタンを押したとき、リセットボタンを表示し、スタートボタンを隠す
+    button3.style.visibility = 'visible';
+    button2.style.visibility = 'hidden';
 });
