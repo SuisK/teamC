@@ -1,9 +1,7 @@
 
 let timer = document.getElementById("timer");
 
-//let h1 = getElementsByTagName("h1");
 
-let start = document.getElementById("start")
 
 let startTime;
 
@@ -49,6 +47,7 @@ start.addEventListener("click", function() {
 
 var button2 = document.getElementById('stop');
 button2.addEventListener('click', function() {
+ 
 
     //タイマーを止めるにはclearTimeoutを使う必要があり、そのためにはclearTimeoutの引数に渡すためのタイマーのidが必要
 <<<<<<< HEAD
