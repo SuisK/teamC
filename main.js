@@ -1,12 +1,6 @@
 let timer = document.getElementById("timer");
 
-<<<<<<< HEAD
-let start = document.getElementById("button")
-=======
-//let h1 = getElementsByTagName("h1");
 
-let start = document.getElementById("start")
->>>>>>> 18f9fd353dff9a684c07a40f705e76ced89d291a
 
 let startTime;
 
@@ -50,15 +44,7 @@ start.addEventListener("click", function() {
     countUp();
 });
 
-<<<<<<< HEAD
-
-let button2 = document.getElementById('button2');
-button2.addEventListener('click',function(){
-
-var button2 = document.getElementById('button2');
-=======
 var button2 = document.getElementById('stop');
->>>>>>> 18f9fd353dff9a684c07a40f705e76ced89d291a
 button2.addEventListener('click', function() {
  
 
