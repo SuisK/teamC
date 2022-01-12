@@ -21,16 +21,8 @@ header h1 {
     font-size: 200px;
 }
 
-<<<<<<< HEAD
-
-
-#button {
-    visibility: hidden;
-    margin-top: -6%;
-=======
 #start {
     position: absolute;
->>>>>>> ee0ebe22e7da19f20c5a3ab80987e92f257cf033
     font-size: 100px;
     width: 99.5%;
     margin-top: 2%;
@@ -46,38 +38,9 @@ header h1 {
 
 #reset {
     visibility: hidden;
-<<<<<<< HEAD
-
     margin-top: -50%;
-}
-#wrapper{
-    display: block;
-    width:100%;
-    text-align: center;
-    margin: 70px auto;
-}
-
-@keyframes slideInup {
-    0%{
-        opacity: 0;
-        transform: translate(0,150px);
-    }
-    100%{
-        opacity: 1;
-        transform: translate(0.0);
-    }
-
-}
-
-.slideInup{
-    animation-name: slideInup;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-}
-=======
     position: absolute;
     width: 99.5%;
     font-size: 100px;
     margin-top: 2%;
 }
->>>>>>> ee0ebe22e7da19f20c5a3ab80987e92f257cf033
