@@ -38,7 +38,6 @@ header h1 {
 
 #reset {
     visibility: hidden;
-    margin-top: -50%;
     position: absolute;
     width: 99.5%;
     font-size: 100px;
