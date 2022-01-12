@@ -44,11 +44,9 @@ let button = document.getElementById("start");
 button.addEventListener("click", function() {
     startTime = Date.now(); //時間データをいれる
     countUp();
+    timer.style.color = "#" + str + str + str;
+    setT
 });
-
-
-//let h1 = getElementsByTagName("h1");
-
 
 
 let button2 = document.getElementById('stop');
@@ -86,3 +84,5 @@ button2.addEventListener("click", function() {
     button3.style.visibility = 'visible';
     button2.style.visibility = 'hidden';
 });
+
+
