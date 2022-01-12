@@ -1,3 +1,4 @@
+
 let timer = document.getElementById("timer");
 
 //let h1 = getElementsByTagName("h1");
@@ -8,7 +9,7 @@ let startTime;
 
 let elapsedTime = 0;//経過時間をいれる
 
-let timerId;　
+let timerId;
 
 let timeToadd = 0;//ストップから再開の時、値保持
 
@@ -68,16 +69,4 @@ button3.addEventListener('click',function(){
 
         //updateTimetTextで0になったタイムを表示
         updateTimetText();
-
-    });
-
-
-
-
-
-
-
-
-
-
-
+});
