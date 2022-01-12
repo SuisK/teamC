@@ -58,6 +58,11 @@ button2.addEventListener('click', function() {
 
 
     timeToadd += Date.now() - startTime;
+    if (-1.0 <= (elapsedTime - second) && (elapsedTime - second) <= 1.0) {
+        document.write(timer.textContent + "秒でした。" + "おめでとう!");
+    } else {
+        document.write(timer.textContent + "秒でした。" + "次は頑張ろう!");
+    }
 });
 
 let button3 = document.getElementById("reset");
@@ -88,16 +93,17 @@ button2.addEventListener("click", function() {
 let thirty = document.getElementById('thirty');
 thirty.addEventListener('click', function() {
     second = 30;
+    console.log(second);
 });
 
 let sixty = document.getElementById('sixty');
 sixty.addEventListener('click', function() {
     second = 60;
+    console.log(second);
 });
 
 let ninety = document.getElementById('ninety');
 ninety.addEventListener('click', function() {
     second = 90;
+    console.log(second);
 });
-
-console.log(second);
