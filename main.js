@@ -12,6 +12,7 @@ let timerId;
 let timeToadd = 0; //ストップから再開の時、値保持
 
 
+
 function updateTimeText() {
     //分のカウント
     let m = Math.floor(elapsedTime / 60000);
@@ -39,13 +40,55 @@ function countUp() {
     }, 10);
 }
 
+// function fade(flag){
+//     str = "00";
+//     document.getElementById("timer").style.color= "#" + str+str+str;
+//     if(flag="out"){
+//         str = "ff";
+//         return;
+//     }
+//     if(flag="in"){
+//         str ="00";
+//         return;
+//     }
+// }
+
+//　10進数を16進数2桁に変換する関数
+function cov16(i){
+    let sin='0123456789ABCDEF';
+    if(i>=255) return '00';
+    if(i<=0) return 'FF';
+    return sin.charAt(Math.floor(i/16))+sin.charAt(i%16);
+      }
+
+let flag=0;
+let i=0;
+function fade(){
+    (flag=="out") ?i++ : i-- ;  //トグルスイッチ、条件演算子
+
+    if(i==255){ //フェードイン
+        flag="in" ;
+        i=254;
+        return;
+    }
+    if(i==0){ //フェードアウト
+        flag="out";
+        i=1;
+        return; 
+    }
+    str= cov16(i);
+    document.getElementById("timer").style.color="#"+str+str+str;
+    setTimeout("fade()",1);
+}
 
 let button = document.getElementById("start");
 button.addEventListener("click", function() {
     startTime = Date.now(); //時間データをいれる
+    fade();
+    // let color = document.getElementById("timer").style.color = "#" + str + str + str;
+    // str = "FF";
     countUp();
-    timer.style.color = "#" + str + str + str;
-    setT
+    
 });
 
 
