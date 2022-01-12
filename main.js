@@ -71,13 +71,16 @@ button3.addEventListener('click', function() {
 
 });
 
+//ボタンを押したときの処理
 var button = document.getElementById('start');
 var button2 = document.getElementById('stop');
 button.addEventListener("click", function() {
+    //スタートボタンを押したとき、ストップボタンを表示し、スタートボタンを隠す
     button2.style.visibility = 'visible';
     button.style.visibility = 'hidden';
 });
 button2.addEventListener("click", function() {
+    //ストップボタンを押したとき、リセットボタンを表示し、スタートボタンを隠す
     button3.style.visibility = 'visible';
     button2.style.visibility = 'hidden';
 });
