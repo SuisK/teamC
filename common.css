@@ -1,6 +1,6 @@
 header h1 {
     text-align: center;
-    font-size: 100px;
+    font-size: 50px;
 }
 
 .time {
@@ -12,33 +12,41 @@ header h1 {
     width: 33%;
     height: 200px;
     margin-left: 5%;
+    font-size: 50px;
 }
 
-#timer{
+#timer {
     text-align: center;
-    margin-top: 0;
-    font-size: 380px;
+    margin-top: 3%;
+    font-size: 200px;
 }
 
+<<<<<<< HEAD
 
 
 #button {
     visibility: hidden;
     margin-top: -6%;
+=======
+#start {
+    position: absolute;
+>>>>>>> ee0ebe22e7da19f20c5a3ab80987e92f257cf033
     font-size: 100px;
-    width: 100%;
+    width: 99.5%;
+    margin-top: 2%;
 }
 
-#button2 {
+#stop {
     visibility: hidden;
     position: absolute;
-    width: 99.15%;
+    width: 99.5%;
     font-size: 100px;
-    margin-top: -4.8%;
+    margin-top: 2%;
 }
 
-#button3 {
+#reset {
     visibility: hidden;
+<<<<<<< HEAD
 
     margin-top: -50%;
 }
@@ -66,3 +74,10 @@ header h1 {
     animation-duration: 2s;
     animation-timing-function: ease;
 }
+=======
+    position: absolute;
+    width: 99.5%;
+    font-size: 100px;
+    margin-top: 2%;
+}
+>>>>>>> ee0ebe22e7da19f20c5a3ab80987e92f257cf033
