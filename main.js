@@ -1,17 +1,9 @@
 let timer = document.getElementById("timer");
-
-
-
 let startTime;
-
 let elapsedTime = 0; //経過時間をいれる
-
 let timerId;
-
 let timeToadd = 0; //ストップから再開の時、値保持
-
-let second = 0;
-
+let second = 0; //目標とする秒数を入れる
 
 function updateTimeText() {
     //分のカウント
@@ -54,31 +46,32 @@ function countUp() {
 // }
 
 //　10進数を16進数2桁に変換する関数
-function cov16(i){
-    let sin='0123456789ABCDEF';
-    if(i>=255) return '00';
-    if(i<=0) return 'FF';
-    return sin.charAt(Math.floor(i/16))+sin.charAt(i%16);
-      }
+function cov16(i) {
+    let sin = '0123456789ABCDEF';
+    if (i >= 255) return '00';
+    if (i <= 0) return 'FF';
+    return sin.charAt(Math.floor(i / 16)) + sin.charAt(i % 16);
+}
 
-let flag=0;
-let i=0;
-function fade(){
-    (flag=="out") ?i++ : i-- ;  //トグルスイッチ、条件演算子
+let flag = 0;
+let i = 0;
 
-    if(i==255){ //フェードイン
-        flag="in" ;
-        i=254;
+function fade() {
+    (flag == "out") ? i++ : i--; //トグルスイッチ、条件演算子
+
+    if (i == 255) { //フェードイン
+        flag = "in";
+        i = 254;
         return;
     }
-    if(i==0){ //フェードアウト
-        flag="out";
-        i=1;
-        return; 
+    if (i == 0) { //フェードアウト
+        flag = "out";
+        i = 1;
+        return;
     }
-    str= cov16(i);
-    document.getElementById("timer").style.color="#"+str+str+str;
-    setTimeout("fade()",1);
+    str = cov16(i);
+    document.getElementById("timer").style.color = "#" + str + str + str;
+    setTimeout("fade()", 1);
 }
 
 let button = document.getElementById("start");
@@ -88,17 +81,14 @@ button.addEventListener("click", function() {
     // let color = document.getElementById("timer").style.color = "#" + str + str + str;
     // str = "FF";
     countUp();
-    
+
 });
 
 
 let button2 = document.getElementById('stop');
 button2.addEventListener('click', function() {
-
-
     //タイマーを止めるにはclearTimeoutを使う必要があり、そのためにはclearTimeoutの引数に渡すためのタイマーのidが必要
     clearTimeout(timerId);
-
 
     timeToadd += Date.now() - startTime;
     if (-1.0 <= (elapsedTime - second) && (elapsedTime - second) <= 1.0) {
@@ -133,6 +123,7 @@ button2.addEventListener("click", function() {
     button2.style.visibility = 'hidden';
 });
 
+//60秒を押したときの処理
 let thirty = document.getElementById('thirty');
 thirty.addEventListener('click', function() {
     second = 30;
