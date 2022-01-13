@@ -21,7 +21,7 @@ function updateTimeText() {
 
     timer.textContent = m + ':' + s + ':' + ms;
 
-    console.log(m + ':' + s + ':' + ms)
+    console.log(m + ':' + s + ':' + ms);
 }
 
 function countUp() {
