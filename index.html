@@ -13,16 +13,25 @@
 </header>
 
 <body>
-    <div class="time">
-        <input type="button" class="option" id="thirty" value="30秒">
-        <input type="button" class="option" id="sixty" value="60秒">
-        <input type="button" class="option" id="ninety" value="90秒">
+    <div id = "home"> 
+        <div class="time">
+            <input type="button" class="option" id="thirty" value="30秒">
+            <input type="button" class="option" id="sixty" value="60秒">
+            <input type="button" class="option" id="ninety" value="90秒">
+        </div>
+        <div id="timer">00:00:00</div>
+        <div class="btn">
+            <input type="button" id="start" value="スタート">
+            <input type="button" id="stop" value="ストップ">
+        </div>
     </div>
-    <div id="timer">00:00:00</div>
-    <div class="btn">
-        <input type="button" id="start" value="スタート">
-        <input type="button" id="stop" value="ストップ">
-        <input type="button" id="reset" value="リセット">
+
+    <div id = "result">
+         <div id = result_time>xx秒でした</div>
+         <div id = difference>差はxx秒でした</div>
+         <div id = comment>コメント</div>
+         <input type="button" id="reset" value="もう一度">
+
     </div>
 
     <script src="main.js"></script>

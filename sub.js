@@ -8,7 +8,7 @@ let startTime;
 
 let elapsedTime = 0; //経過時間をいれる
 
-let timerId;　
+let timerId;
 
 let timeToadd = 0; //ストップから再開の時、値保持
 
