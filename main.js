@@ -56,9 +56,9 @@ button2.addEventListener('click', function() {
 
     timeToadd += Date.now() - startTime;
     if (-1.0 <= (elapsedTime - second) && (elapsedTime - second) <= 1.0) {
-        document.write(timer.textContent + "秒でした。" + "おめでとう!");
+        document.write(timer.textContent + "秒でした。");
     } else {
-        document.write(timer.textContent + "秒でした。" + "次は頑張ろう!");
+        document.write(timer.textContent + "秒でした。");
     }
 });
 
@@ -81,11 +81,11 @@ button.addEventListener("click", function() {
     button.style.visibility = 'hidden';
 });
 
-button2.addEventListener("click", function() {
-    //ストップボタンを押したとき、リセットボタンを表示し、スタートボタンを隠す
-    button3.style.visibility = 'visible';
-    button2.style.visibility = 'hidden';
-});
+// button2.addEventListener("click", function() {
+//     //ストップボタンを押したとき、リセットボタンを表示し、スタートボタンを隠す
+//     button3.style.visibility = 'visible';
+//     button2.style.visibility = 'hidden';
+// });
 
 //60秒を押したときの処理
 let thirty = document.getElementById('thirty');
