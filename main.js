@@ -26,7 +26,6 @@ function updateTimeText() {
     timer.textContent = m + ':' + s + ':' + ms;
 
     //console.log(m + ':' + s + ':' + ms);
-    //console.log(elapsedTime);
 }
 
 function countUp() {
@@ -97,15 +96,6 @@ button2.addEventListener('click', function() {
 let button3 = document.getElementById("reset");
 button3.addEventListener('click', function() {
     
-    //経過時刻を更新するための変数elapsedTimeを0にしてあげつつ、updateTimetTextで0になったタイムを表示。
-    //elapsedTime = 0;
-
-    //リセット時に0に初期化したいのでリセットを押した際に0を代入してあげる
-    //timeToadd = 0;
-
-    //updateTimetTextで0になったタイムを表示
-    //updateTimeText();
-    
     location.reload(); //ページをリロード
 
 });
@@ -126,19 +116,16 @@ button2.addEventListener("click", function() {
 let thirty = document.getElementById('thirty');
 thirty.addEventListener('click', function() {
     second = 30000; //30秒 = 30000ミリ秒
-    //console.log(second);
 });
 
 //60秒を押したときの処理
 let sixty = document.getElementById('sixty');
 sixty.addEventListener('click', function() {
     second = 60000; //60秒 = 60000ミリ秒
-    //console.log(second);
 });
 
 //90秒を押したときの処理
 let ninety = document.getElementById('ninety');
 ninety.addEventListener('click', function() {
     second = 90000; //90秒  = 90000ミリ秒
-    //console.log(second);
 });
